@@ -29,8 +29,7 @@ If the player chooses to play against the computer, both the user and computer a
 
 <details><summary>main</summary>
  
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.is\_game\_over(_mode_, _player\_id_)[\[source\]](_modules/main.html#is_game_over)[](#main.is_game_over "Link to this definition")
-
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.is\_game\_over(_mode_, _player\_id_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/main.py#L9)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Checks if the current game has ended.*
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Args:**<br>
@@ -44,15 +43,16 @@ If the player chooses to play against the computer, both the user and computer a
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`True` if the game is won or ended in draw.
 
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.player\_vs\_ai()[\[source\]](_modules/main.html#player_vs_ai)[](#main.player_vs_ai "Link to this definition")
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Function that handles the player vs ai gameplay.*
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.player\_vs\_player()[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/main.py#L33C17-L33C17)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Function that handles the player vs player gameplay.*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: ``None``
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.player\_vs\_player()[\[source\]](_modules/main.html#player_vs_player)[](#main.player_vs_player "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.player\_vs\_ai()[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/main.py#L73)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Function that handles the player vs player gameplay.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Function that handles the player vs ai gameplay.*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: ``None``
 
@@ -61,11 +61,21 @@ If the player chooses to play against the computer, both the user and computer a
 
 <details><summary>logic</summary>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;class logic.Logic[\[source\]](_modules/logic.html#Logic)[](#logic.Logic "Link to this definition")
-
+### &nbsp;&nbsp;&nbsp;&nbsp;class logic.Logic[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L6)
 > #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bases: `object`
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;game\_status\_check(_player\_id_)[\[source\]](_modules/logic.html#Logic.game_status_check)[](#logic.Logic.game_status_check "Link to this definition")
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player\_turn(_player\_id_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L16)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Takes user inputs and assigns them to an empty plot on the game board.*
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameters:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**player\_id** (str): A string representing the id of the player.(“P1”,”P2”) :type player\_id: str
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: ``None``
+
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;game\_status\_check(_player\_id_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L45)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Checks if the markers on the board satisfy the condition for a win or draw.* <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*If three of the markers match horizontally,vertically or diagonally then condition is met.*<br>
@@ -78,23 +88,21 @@ If the player chooses to play against the computer, both the user and computer a
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the winning marker, ‘X’ or ‘O’. If the game ends in a draw, return ‘Draw’.
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player\_turn(_player\_id_)[\[source\]](_modules/logic.html#Logic.player_turn)[](#logic.Logic.player_turn "Link to this definition")
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Takes user inputs and assigns them to an empty plot on the game board.*
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;update\_dictionary\_array()[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L81)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameters:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Updates horizontal,vertical and diagonal arrays with updated values from the board.*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**player\_id** (str): A string representing the id of the player.(“P1”,”P2”) :type player\_id: str
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: `None`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: ``None``
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reset\_board()[\[source\]](_modules/logic.html#Logic.reset_board)[](#logic.Logic.reset_board "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reset\_board()[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L140)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Resets the Tic Tac Toe board (`board.dict`) to its default stateand resets the `p_list`.*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: `None`
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score\_update(_mark_)[\[source\]](_modules/logic.html#Logic.score_update)[](#logic.Logic.score_update "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score\_update(_mark_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L118)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Updates the score of the first player to match three markers.*
 
@@ -106,18 +114,13 @@ If the player chooses to play against the computer, both the user and computer a
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A tuple consisting of player 1 score and player 2 score.
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;update\_dictionary\_array()[\[source\]](_modules/logic.html#Logic.update_dictionary_array)[](#logic.Logic.update_dictionary_array "Link to this definition")
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Updates horizontal,vertical and diagonal arrays with updated values from the board.*
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: `None`
-
-### &nbsp;&nbsp;&nbsp;&nbsp;_class_ logic.VsAi(_ai\_id_, _player\_id_, _corner\_prob_, _defence\_prob_, _offense\_prob_, _random\_prob_)[\[source\]](_modules/logic.html#VsAi)[](#logic.VsAi "Link to this definition")
+### &nbsp;&nbsp;&nbsp;&nbsp;_class_ logic.VsAi(_ai\_id_, _player\_id_, _corner\_prob_, _defence\_prob_, _offense\_prob_, _random\_prob_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L162)
 
 
-> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bases: [`Logic`](#logic.Logic "logic.Logic")
+> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bases: [`Logic`](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L6 "logic.Logic")
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Instantiates a subclass of Logic class.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Instantiates a subclass object of Logic class.*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Args:**<br>
 
@@ -148,36 +151,15 @@ If the player chooses to play against the computer, both the user and computer a
 
 
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ai\_turn()[\[source\]](_modules/logic.html#VsAi.ai_turn)[](#logic.VsAi.ai_turn "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ai\_turn()[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L240)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Method responsible for ai moves on the board.*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: `None`
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diagonal\_check(_diagonal\_list_, _start\_key_, _iteration\_increment_)[\[source\]](_modules/logic.html#VsAi.diagonal_check)[](#logic.VsAi.diagonal_check "Link to this definition")
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Checks diagonal arrays and appends the moves that Ai can make to suitable lists.*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameters:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**diagonal\_list** (_list_) – A diagonally sliced list from the game board.
-    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**start\_key** (_int_) – The number in which the iteration starts.
-    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**iteration\_increment** (_int_) – Increment after each loop.
-    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: `None`
-
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get\_ai\_moves()[\[source\]](_modules/logic.html#VsAi.get_ai_moves)[](#logic.VsAi.get_ai_moves "Link to this definition")
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Compares and checks various arrays extracted from the game board.* <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Then returns a list of possible moves the Ai can make along with the type of move.*
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*A tuple which consists of a list of possible moves and the type of move.*
-
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linear\_check(_linear\_list_, _start\_key_, _iteration\_increment_, _row\_start\=0_, _row\_increment\=0_)[\[source\]](_modules/logic.html#VsAi.linear_check)[](#logic.VsAi.linear_check "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linear\_check(_linear\_list_, _start\_key_, _iteration\_increment_, _row\_start\=0_, _row\_increment\=0_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L281)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Checks horizontal or vertical arrays and appends the moves that Ai can make to suitable lists.*
 
@@ -196,16 +178,30 @@ If the player chooses to play against the computer, both the user and computer a
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: `None`
 
-### &nbsp;&nbsp;&nbsp;&nbsp;_class_ logic.VsPlayer[\[source\]](_modules/logic.html#VsPlayer)[](#logic.VsPlayer "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diagonal\_check(_diagonal\_list_, _start\_key_, _iteration\_increment_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L352)
 
-> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bases: [`Logic`](#logic.Logic "logic.Logic")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Checks diagonal arrays and appends the moves that Ai can make to suitable lists.*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Instantiates a subclass of Logic class.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameters:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**diagonal\_list** (_list_) – A diagonally sliced list from the game board.
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**start\_key** (_int_) – The number in which the iteration starts.
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**iteration\_increment** (_int_) – Increment after each loop.
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns: `None`
+
+
+### &nbsp;&nbsp;&nbsp;&nbsp;_class_ logic.VsPlayer[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L155)
+> #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bases: [`Logic`](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/logic.py#L6 "logic.Logic")
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Instantiates a subclass object of Logic class.*
 
 </details>
 <details><summary >game_display</summary>
 
-### &nbsp;&nbsp;&nbsp;&nbsp;class game\_display.GameDisplay(_vs\_mode_, _ai\_is\_p2\=False_)[\[source\]](_modules/game_display.html#GameDisplay)[](#game_display.GameDisplay "Link to this definition")
+### &nbsp;&nbsp;&nbsp;&nbsp;class game\_display.GameDisplay(_vs\_mode_, _ai\_is\_p2\=False_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/game_display.py#L26)
 
 > #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bases: `object`
 
@@ -217,7 +213,7 @@ If the player chooses to play against the computer, both the user and computer a
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ai_is_p2(bool):``True`` if Ai is playing 'O'. Default is ``False``
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_static_ console\_clear()[\[source\]](_modules/game_display.html#GameDisplay.console_clear)[](#game_display.GameDisplay.console_clear "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_static_ console\_clear()[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/game_display.py#L53)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Static method that clears the console and adds the title art.* 
 
@@ -227,13 +223,13 @@ If the player chooses to play against the computer, both the user and computer a
 
 
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_static_ welcome\_screen()[\[source\]](_modules/game_display.html#GameDisplay.welcome_screen)[](#game_display.GameDisplay.welcome_screen "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_static_ welcome\_screen()[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/game_display.py#L42)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Welcome screen displayed once when the program starts.Is a static method.*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns:`None`
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display\_board(_board\_dict_, _scoretuple\=(0, 0)_)[\[source\]](_modules/game_display.html#GameDisplay.display_board)[](#game_display.GameDisplay.display_board "Link to this definition")
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display\_board(_board\_dict_, _scoretuple\=(0, 0)_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/game_display.py#L63)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Configures and Displays the game board on the console.*
 
@@ -248,8 +244,7 @@ If the player chooses to play against the computer, both the user and computer a
 
 
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;game\_result(_marker_)[\[source\]](_modules/game_display.html#GameDisplay.game_result)[](#game_display.GameDisplay.game_result "Link to this definition")
-
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;game\_result(_marker_)[\[source\]](https://github.com/agniveshsp/tic-tac-toe/blob/4e6909977e19aba44b6de52f4b0c79028daccbf6/game_display.py#L115)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Prints the game result on to the console.*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameters:
@@ -260,10 +255,54 @@ If the player chooses to play against the computer, both the user and computer a
 
 </details>
 
+--- 
 
-     
+## Flowchart 
+<details><summary>Class Diagrams</summary>
+<br><br>
 
 
 
+![classdiagarram](https://github.com/agniveshsp/tic-tac-toe/assets/67277625/2e952476-22f2-4bc7-8d4d-6b69daef0ec4)<?xml version="1.0" encoding="UTF-8"?>
+
+</details>
+
+ 
+<details><summary>main</summary>
+ 
+<details><summary>&nbsp;&nbsp;&nbsp;&nbsp;start</summary>
+ 
+
+![mainrun](https://github.com/agniveshsp/tic-tac-toe/assets/67277625/de9bbac5-d9a7-4b6c-b283-07fb93ee6d38)<?xml version="1.0" encoding="UTF-8"?>
+
+
+</details>
+
+<details><summary>&nbsp;&nbsp;&nbsp;&nbsp;functions</summary>
+ 
+![mainfunc](https://github.com/agniveshsp/tic-tac-toe/assets/67277625/ba10c58b-d166-4767-9df2-049e7f9a265b)<?xml version="1.0" encoding="UTF-8"?>
+
+</details>
+
+</details>
+
+
+<details><summary>logic</summary>
+ 
+![logicclass](https://github.com/agniveshsp/tic-tac-toe/assets/67277625/c63da9c9-79f6-4b3c-a033-ebb25023244d)<?xml version="1.0" encoding="UTF-8"?>
+ 
+ 
+</details>
+
+
+
+<details><summary>gamedisplay</summary>
+ 
+![gamedisplay](https://github.com/agniveshsp/tic-tac-toe/assets/67277625/44a559f2-6683-439c-9352-47519b9c0b5d)
+
+ 
+</details>
+
+ 
  
  
