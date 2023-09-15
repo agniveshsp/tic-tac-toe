@@ -4,6 +4,8 @@ A simple console based 'tic tac toe' game that has a player vs player mode as we
 
 ---
 
+# [Quick Play](https://replit.com/@AgniveshSp/tic-tac-toe)
+
 ## Instructions
 *How to run the program and play the game.*
 
